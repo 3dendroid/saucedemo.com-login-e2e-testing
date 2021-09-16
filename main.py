@@ -1,5 +1,4 @@
 import time
-import unittest
 from selenium import webdriver
 
 URL = 'https://www.saucedemo.com/'
