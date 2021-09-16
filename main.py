@@ -5,10 +5,9 @@ from selenium import webdriver
 URL = 'https://www.saucedemo.com/'
 
 
-def test_login_saucedemo():
+def login_saucedemo():
     driver = webdriver.Chrome('driver/chromedriver.exe')
     driver.get(URL)
-    time.sleep(2)
     login_user = driver.find_element_by_id("user-name")
     login_user.send_keys("standard_user")
     time.sleep(2)
@@ -17,8 +16,9 @@ def test_login_saucedemo():
     time.sleep(2)
     login = driver.find_element_by_id('login-button')
     login.click()
+    time.sleep(2)
     driver.close()
 
 
 if __name__ == "__main__":
-    test_login_saucedemo()
+    login_saucedemo()
